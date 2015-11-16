@@ -16,7 +16,7 @@ desired_capabilities['platformVersion'] = '9.0'
 desired_capabilities['browserName'] = 'safari'
 desired_capabilities['deviceName'] = 'iPhone Simulator'
 # desired_capabilities['appium-version'] = '1.4.15beta1'
-desired_capabilities['appiumVersion'] = {'appium-url': 'v1.4.15beta1.tar.bz2'}
+desired_capabilities['appiumVersion'] = {'appium-url': 'https://github.com/imurchie/support/blob/master/eco-883/appium-v1.4.15beta1.tar.bz2?raw=true'}
 # appiumVersion: {"appium-url": "arbitraryurl"}`
 desired_capabilities['device-orientation'] = 'portrait'
 desired_capabilities['name'] = 'switchingContext'
@@ -32,14 +32,14 @@ driver.implicitly_wait(30)
 driver.get("https://www.google.com/")
 print driver.contexts
 
-time.sleep(10)
+# time.sleep(10)
 
-driver.switch_to.context ("NATIVE_APP")
+driver.switch_to.context("NATIVE_APP")
 print driver.contexts
 
-time.sleep(10)
+# time.sleep(10)
 
-driver.switch_to.context ("WEBVIEW_1")
+driver.switch_to.context("WEBVIEW_1")
 print driver.contexts
 
 # time.sleep(10)
